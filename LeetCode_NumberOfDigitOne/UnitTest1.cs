@@ -54,11 +54,7 @@ namespace LeetCode_NumberOfDigitOne
 
         public static int CountDigitOne(int n)
         {
-            if (n > 0)
-            {
-                return Enumerable.Range(1, n).Count(HasDigitOne);
-            }
-            return 0;
+            return n > 0 ? Enumerable.Range(1, n).Count(HasDigitOne) : 0;
         }
     }
 }
