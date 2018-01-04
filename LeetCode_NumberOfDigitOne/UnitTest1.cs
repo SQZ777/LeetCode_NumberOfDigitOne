@@ -10,19 +10,19 @@ namespace LeetCode_NumberOfDigitOne
         [TestMethod]
         public void HasDigitOne_Input_0_Should_Be_false()
         {
-            Assert.IsFalse(Solution.HasDigitOne(0));
+            Assert.AreEqual(0, Solution.HasDigitOne(0));
         }
 
         [TestMethod]
         public void HasDigitOne_Input_1_Should_Be_True()
         {
-            Assert.IsTrue(Solution.HasDigitOne(1));
+            Assert.AreEqual(1, Solution.HasDigitOne(1));
         }
 
         [TestMethod]
         public void HasDigitOne_Input_10_Should_Be_True()
         {
-            Assert.IsTrue(Solution.HasDigitOne(10));
+            Assert.AreEqual(1, Solution.HasDigitOne(10));
         }
 
         [TestMethod]
@@ -40,21 +40,21 @@ namespace LeetCode_NumberOfDigitOne
         [TestMethod]
         public void Input_f1_Should_Be_0()
         {
-            Assert.AreEqual(0,Solution.CountDigitOne(-1));
+            Assert.AreEqual(0, Solution.CountDigitOne(-1));
         }
 
     }
 
     public class Solution
     {
-        public static bool HasDigitOne(int i)
+        public static int HasDigitOne(int i)
         {
-            return i.ToString().Contains("1");
+            return i.ToString().Count(x => x == '1');
         }
 
         public static int CountDigitOne(int n)
         {
-            return n > 0 ? Enumerable.Range(1, n).Count(HasDigitOne) : 0;
+            return n > 0 ? Enumerable.Range(1, n).Sum(HasDigitOne) : 0;
         }
     }
 }
