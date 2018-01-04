@@ -16,6 +16,13 @@ namespace LeetCode_NumberOfDigitOne
         {
             Assert.IsTrue(Solution.HasDigitOne(1));
         }
+
+        [TestMethod]
+        public void HasDigitOne_Input_10_Should_Be_True()
+        {
+            Assert.IsTrue(Solution.HasDigitOne(10));
+        }
+        
     }
 
     public class Solution
