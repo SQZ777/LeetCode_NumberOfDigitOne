@@ -43,6 +43,16 @@ namespace LeetCode_NumberOfDigitOne
             Assert.AreEqual(0, Solution.CountDigitOne(-1));
         }
 
+        [TestMethod]
+        public void Input_11_Should_Be_4()
+        {
+            Assert.AreEqual(4, Solution.CountDigitOne(11));
+        }
+
+        public void Input_824883294_Should_Be_654()
+        {
+            Assert.AreEqual(1, Solution.CountDigitOne(824883294));
+        }
     }
 
     public class Solution
@@ -54,7 +64,7 @@ namespace LeetCode_NumberOfDigitOne
 
         public static int CountDigitOne(int n)
         {
-            return n > 0 ? Enumerable.Range(1, n).Sum(HasDigitOne) : 0;
+          return n > 0 ? Enumerable.Range(1, n).Sum(HasDigitOne) : 0;
         }
     }
 }
