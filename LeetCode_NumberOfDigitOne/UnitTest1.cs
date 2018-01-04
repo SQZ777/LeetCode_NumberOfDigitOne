@@ -16,7 +16,7 @@ namespace LeetCode_NumberOfDigitOne
     {
         public static bool HasDigitOne(int i)
         {
-            throw new System.NotImplementedException();
+            return false;
         }
     }
 }
