@@ -28,7 +28,13 @@ namespace LeetCode_NumberOfDigitOne
         [TestMethod]
         public void Input_1_Should_Be_1()
         {
-            Assert.AreEqual(1,Solution.CountDigitOne(1));
+            Assert.AreEqual(1, Solution.CountDigitOne(1));
+        }
+
+        [TestMethod]
+        public void Input_10_Should_Be_2()
+        {
+            Assert.AreEqual(2, Solution.CountDigitOne(10));
         }
 
     }
@@ -37,11 +43,7 @@ namespace LeetCode_NumberOfDigitOne
     {
         public static bool HasDigitOne(int i)
         {
-            if (i.ToString().Contains("1"))
-            {
-                return true;
-            }
-            return false;
+            return i.ToString().Contains("1");
         }
 
         public static int CountDigitOne(int n)
